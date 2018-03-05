@@ -1,0 +1,175 @@
+\documentclass{article}%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+%-------------------------------------------
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\checkmark$}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\setlength{\textwidth}{7.0in}
+\setlength{\oddsidemargin}{-0.35in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.0in}
+\setlength{\parindent}{0.3in}
+\begin{document}
+
+\begin{flushright}
+\textbf{Ziad Arafat \\
+FEB 26, 2017}
+\end{flushright}
+
+\begin{center}
+\textbf{CS 111: CS Principles \\
+Homework I} \\
+\end{center}
+
+\section{Question 1}
+
+\begin{Large}
+\textbf{Algorithm for doing my homework}
+\end{Large}
+
+
+\begin{lstlisting}
+Get Coffee or iced tea.
+Play ambient music.
+Get the assigned homework.
+Get the page numbers and question numbers.
+Get CS book.
+Open CS Book to those pages.
+While the homework is not complete:
+	While the problem is not complete:
+		Try to solve the problem.
+		If cup is empty:
+			Refill coffee or tea.
+		
+		Sip coffee or tea.
+	Move on to the next problem.
+	
+Close CS book.
+Put CS book in breifcase.
+Compile the document and submit.
+Pause ambient music.
+Recycle coffee/tea container.
+End homework session.
+\end{lstlisting}
+
+This algorithm meets the criteria in the book because it is largely unambigious to someone who is familiar with the items mentioned and it is effectively 'computable' by a human carrying out the steps. It also produces a result being the complete homework document in a finite amount of time. Thus it meets the books definition of an algorithm\newline
+
+\begin{large}
+Checklist
+\end{large}
+
+\begin{todolist}
+\item unambiguous
+\item effectively computable
+\item produces a result
+\item halts in a finite amount of time
+\end{todolist}
+
+\clearpage
+
+\section{Question 5}
+
+I made a table to show the values at each step
+
+\begin{table}[h]
+\centering
+\caption{Steps and Values}
+\label{my-label}
+\begin{tabular}{@{}l|l|l|l|l|l@{}}
+\toprule
+Step & Carry & $C_3$ & $C_2$ & $C_1$ & $C_0$ \\ \midrule
+1    & 0     & 0   & 0   & 0   & 0   \\
+2    & 0     & 0   & 0   & 0   & 0   \\
+3    & 0     & 0   & 0   & 0   & 0   \\
+$4_0$  & 0     & 0   & 0   & 0   & 18  \\
+$5_0$  & 1     & 0   & 0   & 0   & 8   \\
+$6_0$  & 1     & 0   & 0   & 0   & 8   \\
+$4_1$  & 1     & 0   & 0   & 7   & 8   \\
+$5_1$  & 0     & 0   & 0   & 7   & 8   \\
+$6_1$  & 0     & 0   & 0   & 7   & 8   \\
+$4_2$  & 0     & 0   & 1   & 7   & 8   \\
+$5_2$  & 0     & 0   & 1   & 7   & 8   \\
+$6_2$  & 0     & 0   & 1   & 7   & 8   \\
+7    & 0     & 0   & 1   & 7   & 8   \\
+8    & 0     & 0   & 1   & 7   & 8   \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\section{Question 8}
+It would not be effectively computable with a is equal to 0 because that would make the denominator 0. \newline \newline 
+Also any values of a, b, and c where the computation in the square-root equate to -1. Because the square root of -1 is not a real number. We are still technically working with real numbers in that case but the result of the square root will be out of the domain of real numbers. 
+
+
+\section{Question 11}
+It would take $49.19$ billion years to complete. We can find this by calculating the number of permutations of $25$ cities and dividing it by $10,000,000. 25! ∕ 10,000,000$. So it’s definitely not feasible. Without extensive research I cannot find a way to make this at least practical.
+\clearpage
+
+\section{Question 13}
+It is technically correct in that it will get the correct answer. However it can be simplified. 
+\begin{lstlisting}
+If x>y and x>z:
+
+	print(x)
+
+	stop 
+
+else if y>z:
+
+	print(y)
+
+	stop
+
+else:
+
+	print(z)
+	stop
+\end{lstlisting}
+
+\section{Question 18}
+dvd char capacity= 5,000,000,000
+
+chars per word = $5$
+
+words per page = $300$
+
+pages per inch = $300$
+
+inches per foot = $12$
+
+shelf space in linear feet = dvd char capacity $\div$ chars per word $\div$ words per page $\div$ pages per inch $\div$ inches per foot
+
+shelf space used in linear feet == 926 ft \newline \newline
+
+
+\vspace*{0.5in}
+\noindent Done in LaTeX
+\end{document}
